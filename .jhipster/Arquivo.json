@@ -1,0 +1,46 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "mega",
+            "otherEntityName": "mega",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "megaBackup",
+            "otherEntityName": "mega",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "autor",
+            "otherEntityName": "autor",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "linkDownload",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tamanho",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "senha",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170806142226",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "arquivo",
+    "pagination": "infinite-scroll"
+}

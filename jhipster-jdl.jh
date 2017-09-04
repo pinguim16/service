@@ -1,0 +1,28 @@
+entity Arquivo{
+	nome String,
+    linkDownload String,
+    tamanho Double
+}
+
+entity Mega{
+	nome String,
+    senha String
+}
+
+entity Autor{
+	nome String
+}
+
+relationship ManyToOne {
+	Arquivo{mega} to Mega,
+    Arquivo{megaBackup} to Mega,
+    Arquivo{autor} to Autor
+}
+
+// Set pagination options
+paginate Arquivo, Mega, Autor with infinite-scroll
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
